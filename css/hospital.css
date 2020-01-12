@@ -1,0 +1,179 @@
+/* 多条件查询/过滤 */
+.filter{
+    min-height: 100px;
+    background-color: #fbfbfb;
+    margin: 20px auto;
+}
+.filter .group{
+    padding: 15px 60px 15px 180px;
+    color: #4c4948;
+    font-size: 12px;
+    line-height: 18px;
+    min-height: 30px;
+    position: relative;
+}
+.filter .group .caption{
+    position: absolute;
+    left: 30px;
+    top: 21px;
+    width: 150px;
+}
+.filter .group .condition{
+    color: #4c4948;
+    display: inline-block;
+    position: relative;
+    margin: 6px 24px 6px 0px;
+    padding: 0 5px;
+}
+.filter .group .caption .condition{
+    position: absolute;
+    right: 0;
+    top: -6px;
+}
+.filter .group .caption .condition::before,
+.filter .group .condition::after{
+    content: ' ';
+    display: block;
+    width: 1px;
+    height: 18px;
+    background-color: #dcdddd;
+    top: 0;
+    right: -12px;
+    position: absolute;
+}
+.filter .group .caption .condition::before{
+    left: -12px;
+}
+.filter .group .condition_focus,
+.filter .group .condition:hover{
+    color: #ffffff;
+    background-color: #60bff2;
+}
+/* 医院列表 */
+.datalist .item{
+    height: 130px;
+    padding: 23px 0 23px 224px;
+    border: 1px solid #f4f6fa;
+    border-bottom: none;
+    position: relative;
+}
+.datalist .item .bg-pic{
+    width: 180px;
+    height: 130px;
+    position: absolute;
+    overflow: hidden;
+    left: 15px;
+    top: 23px;
+}
+.datalist .item:hover{
+    background-color: #f5fcff;
+}
+.datalist .item .bg-pic img{
+    width: 100%;
+    height: 100%;
+}
+.datalist .item .name{
+    padding: 13px 0;
+    color: #000;
+    font-size: 15px;
+}
+.datalist .item .name .level{
+    padding: 0 2px 0 14px;
+    color: #f7b52c;
+    font-size: 12px;
+    font-weight: bold;
+}
+.datalist .item .address,
+.datalist .item .phone,
+.datalist .item .time{
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #888;
+    line-height: 17px;
+    padding-left: 22px;
+    background: url(../img/icon-tel.png) no-repeat;
+    background-position: 1px -36px;
+}
+.datalist .item .phone{
+    background-position: 1px -0;
+}
+.datalist .item .address{
+background-position: 1px -17px;
+}
+.datalist .item .button{
+    position: absolute;
+    width: 105px;
+    height: 37px;
+    right: 70px;
+    top: 98px;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    background: #f7b52c;
+    line-height: 37px;
+    border-radius: 5px;
+}
+.datalist .item .button:hover{
+    background: #60bff2;
+}
+/* 分页 */
+.paging{
+    height: 45px;
+    line-height: 25px;
+    border: 1px solid #f4f6fa;
+    text-align: center;
+    color: #666;
+    margin-bottom: 100px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+.paging .item{
+    margin-left: 14px;
+    color: #f7b52c;
+}
+.paging .item_icon{
+    background: url(../img/icon-pagination-arrow.png) no-repeat;
+}
+.paging .item_icon:hover{
+    background-color: #ffbe94;
+}
+.paging .item_prev{
+    background-position: 6px -15px;
+}
+.paging .item_prev:hover{
+	background-position: -20px -15px;
+}
+.paging .item_next{
+    background-position: 8px 4px;
+}
+.paging .item_next:hover{
+	background-position: -18px 4px;
+}
+.paging .input_page,
+.paging .item_page,
+.paging .item_icon{
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	line-height: 23px;
+	border:solid 1px #f7b52c;
+    border-radius: 3px;
+    
+}
+.paging .item_page_focus{
+	background: #ffbe94;
+	color: #fff;
+}
+.paging .input_page{
+    width: 45px;
+    text-align: center;
+}
+.paging .input_submit{
+    width: 34px;
+    height: 25px;
+    display: inline-block;
+    margin-left: 10px;
+    background: #ffbe94 url(../img/icon-pagination-go.png);
+    vertical-align: middle;
+}
